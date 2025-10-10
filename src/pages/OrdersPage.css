@@ -1,6 +1,20 @@
+.track-package-button {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(220, 220, 220, 0.2) 0px 2px 5px 0px;
+  border: rgb(200, 200, 200), solid 1px;
+  border-radius: 5px;
+}
+
+.buy-again-button {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  box-shadow: rgb(220, 220, 220) 0px 2px 5px 0px;
+  border: none;
+}
+
 .orders-page {
   max-width: 850px;
-  margin-top: 90px;
+  margin-top: 390px;
   margin-bottom: 100px;
   padding-left: 20px;
   padding-right: 20px;

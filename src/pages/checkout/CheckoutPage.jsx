@@ -5,6 +5,12 @@ import { CheckoutHeader } from "./CheckoutHeader";
 export function CheckoutPage() {
   return (
     <>
+      <link
+        rel="icon"
+        type="image/png"
+        href="../public/images/cart-favicon.png"
+      />
+
       <title>Checkout</title>
 
       <CheckoutHeader />

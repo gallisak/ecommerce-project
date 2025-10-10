@@ -14,6 +14,13 @@
   margin-right: auto;
 }
 
+.place-order-button {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  border: none;
+  box-shadow: rgb(220, 220, 220) 0px 2px 5px 0px;
+}
+
 .checkout-page .page-title {
   font-weight: 700;
   font-size: 22px;
@@ -110,7 +117,6 @@
 }
 
 .checkout-page .product-price {
-
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -152,7 +158,6 @@
 }
 
 .checkout-page .delivery-option-date {
-
   font-weight: 500;
   margin-bottom: 3px;
 }
