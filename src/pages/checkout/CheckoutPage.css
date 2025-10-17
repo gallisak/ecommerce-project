@@ -19,6 +19,7 @@
   color: white;
   border: none;
   box-shadow: rgb(220, 220, 220) 0px 2px 5px 0px;
+  cursor: pointer;
 }
 
 .checkout-page .page-title {
