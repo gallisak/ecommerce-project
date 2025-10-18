@@ -18,6 +18,10 @@
   margin-bottom: 30px;
 }
 
+.progress-bar {
+  transition: width 0.5s ease;
+}
+
 .tracking-page .delivery-date {
   font-size: 25px;
   font-weight: 700;
