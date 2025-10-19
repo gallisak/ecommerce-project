@@ -14,7 +14,33 @@
   margin-right: auto;
 }
 
+.update-quantity-link {
+  color: rgb(25, 135, 84);
+  cursor: pointer;
+}
+
+.delete-quantity-link {
+  color: rgb(25, 135, 84);
+  cursor: pointer;
+}
+
+.delete-quantity-link:hover {
+  color: rgb(19, 203, 117);
+}
+
+.update-quantity-link:hover {
+  color: rgb(19, 203, 117);
+}
+
 .place-order-button {
+  background-color: rgb(25, 135, 84);
+  color: white;
+  border: none;
+  box-shadow: rgb(220, 220, 220) 0px 2px 5px 0px;
+  cursor: pointer;
+}
+
+.delete-quantity-link .place-order-button {
   background-color: rgb(25, 135, 84);
   color: white;
   border: none;
