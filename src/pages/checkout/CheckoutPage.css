@@ -19,6 +19,11 @@
   cursor: pointer;
 }
 
+.ChangeCart {
+  width: 50px;
+  border-radius: 3px;
+}
+
 .delete-quantity-link {
   color: rgb(25, 135, 84);
   cursor: pointer;
