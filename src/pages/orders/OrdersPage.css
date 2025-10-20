@@ -10,6 +10,7 @@
   color: white;
   box-shadow: rgb(220, 220, 220) 0px 2px 5px 0px;
   border: none;
+  cursor: pointer;
 }
 
 .orders-page {
