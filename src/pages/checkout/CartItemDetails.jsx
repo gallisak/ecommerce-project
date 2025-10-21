@@ -24,6 +24,17 @@ export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
     }
   };
 
+  const handleQuantityKeyDown = (event) => {
+    const keyPressed = event.key;
+
+    if (keyPressed === "Enter") {
+      updateQuantity();
+    } else if (keyPressed === "Escape") {
+      setQuantity(cartItem.quantity);
+      setUpdateCart(false);
+    }
+  };
+
   return (
     <>
       <img className="product-image" src={cartItem.product.image} />
@@ -38,6 +49,7 @@ export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
             Quantity:{" "}
             {updateCart ? (
               <input
+                onKeyDown={handleQuantityKeyDown}
                 onChange={ChangeInput}
                 value={quantity}
                 className="ChangeCart"
