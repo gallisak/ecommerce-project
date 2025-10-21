@@ -1,13 +1,28 @@
 import { useState } from "react";
 import { formatMoney } from "../../utils/money";
+import axios from "axios";
 
-export function CartItemDetails({ cartItem, deleteCartItem }) {
+export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
   const [updateCart, setUpdateCart] = useState(false);
 
-  function toggleUpdateCart() {
-    setUpdateCart(!updateCart);
-    console.log(updateCart);
+  const [quantity, setQuantity] = useState(cartItem.quantity);
+
+  function ChangeInput(e) {
+    const text = e.target.value;
+    setQuantity(text);
   }
+
+  const updateQuantity = async () => {
+    if (updateCart) {
+      await axios.put(`/api/cart-items/${cartItem.productId}`, {
+        quantity: Number(quantity),
+      });
+      await loadCart();
+      setUpdateCart(false);
+    } else {
+      setUpdateCart(true);
+    }
+  };
 
   return (
     <>
@@ -22,16 +37,21 @@ export function CartItemDetails({ cartItem, deleteCartItem }) {
           <span>
             Quantity:{" "}
             {updateCart ? (
-              <input className="ChangeCart" type="text" />
+              <input
+                onChange={ChangeInput}
+                value={quantity}
+                className="ChangeCart"
+                type="text"
+              />
             ) : (
               <span className="quantity-label">{cartItem.quantity}</span>
             )}
           </span>
           <span
-            onClick={toggleUpdateCart}
+            onClick={updateQuantity}
             className="update-quantity-link link-primary"
           >
-            Update
+            {updateCart ? "Save" : "Update"}
           </span>
           <span
             className="delete-quantity-link link-primary"

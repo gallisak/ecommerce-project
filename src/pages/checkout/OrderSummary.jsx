@@ -27,6 +27,7 @@ export function OrderSummary({ cart, deliveryOptions, loadCart }) {
                 <CartItemDetails
                   deleteCartItem={deleteCartItem}
                   cartItem={cartItem}
+                  loadCart={loadCart}
                 />
 
                 <DeliveryOptions
