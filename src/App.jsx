@@ -10,6 +10,8 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const a = 4;
+  console.log(a);
 
   const loadCart = async () => {
     const response = await axios.get("/api/cart-items?expand=product");
